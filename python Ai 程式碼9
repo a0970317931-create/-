@@ -41,7 +41,7 @@ print(fruit1, fruit2)
 # 4. 印出變數 fruit1 的資料型態，用以驗證字串物件類別 (str)
 print(type(fruit1))
 
-請謹慎使用程式碼。
+
 
 ### 五、執行成果
 
