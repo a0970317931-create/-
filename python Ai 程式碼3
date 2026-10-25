@@ -63,7 +63,7 @@ del fruitsList[1:3]
 # 8. 印出刪除元素後的最終串列結果
 print(fruitsList)
 
-請謹慎使用程式碼。
+
 
 ### 五、執行成果
 
@@ -80,7 +80,6 @@ text
 ['Apple', 'pineapple']
 ['Banana', 'pineapple', 'Orange']
 
-請謹慎使用程式碼。
 
 ### 六、個人負責內容
 
