@@ -1,1 +1,88 @@
+ fruitsList= ['Banana', 'Apple', 'Grape', 'pineapple', 'Orange']
+ print(fruitsList[1:3])
+ print(fruitsList[1:])
+ print(fruitsList[:3])
+ print(fruitsList[:])
+ print(fruitsList)
+ print(fruitsList[::2])
+ print(fruitsList[1::2])
+ del fruitsList[1:3]
+ print(fruitsList)
+### Python 基礎資料結構：串列切片與動態管理操作
 
+### 一、作品介紹
+
+本作品運用 Python 展示核心資料結構「串列（List）」的進階操控技術。 
+
+* **主要功能**：透過多元的切片（Slicing）語法與 del 關鍵字，實現資料的精準提取、間隔跳躍讀取以及動態刪除。
+* **專案目標**：希望透過程式碼範例，深入解析 Python 串列在記憶體中的索引機制，這在後續進行大數據資料清洗與陣列快取管理時，是非常核心的基礎技術。
+
+### 二、使用技術
+
+技術類別使用內容
+****程式語言****
+Python 3.x
+****核心技術****
+List 串列資料結構、正向索引（Indexing）、切片操作（Slicing [start:stop:step]）、del 記憶體元素刪除
+
+### 三、主要功能
+
+* **範圍精準切片**：操作 [1:3]、[1:] 與 [:3] 語法，靈活提取串列中的局部子集。
+* **步長跳躍選取**：利用 [::2] 與 [1::2] 的步長（Step）參數，實現每隔一項元素跳躍讀取的進階功能。
+* **動態記憶體管理**：透過 del 關鍵字直接移除特定範圍的元素，並即時更新串列的內容與長度。
+
+### 四、核心程式碼
+
+python
+
+# 初始化水果資料串列（索引值為 0, 1, 2, 3, 4）
+fruitsList = ['Banana', 'Apple', 'Grape', 'pineapple', 'Orange']
+
+# 1. 提取索引 1 到 2 的元素（不包含 3）
+print(fruitsList[1:3])
+
+# 2. 從索引 1 開始提取到最後
+print(fruitsList[1:])
+
+# 3. 從開頭提取到索引 2（不包含 3）
+print(fruitsList[:3])
+
+# 4. 複製整個串列（從頭到尾）
+print(fruitsList[:])
+print(fruitsList)
+
+# 5. 從頭開始提取，每隔 2 個元素取一次（步長=2）
+print(fruitsList[::2])
+
+# 6. 從索引 1 開始提取，每隔 2 個元素取一次（步長=2）
+print(fruitsList[1::2])
+
+# 7. 刪除索引 1 到 2 的元素（'Apple' 與 'Grape'）
+del fruitsList[1:3]
+
+# 8. 印出刪除元素後的最終串列結果
+print(fruitsList)
+
+請謹慎使用程式碼。
+
+### 五、執行成果
+
+此程式在終端機（Terminal）執行後的標準輸出結果如下，完整展現了切片邏輯與刪除後的狀態變化： 
+
+text
+
+['Apple', 'Grape']
+['Apple', 'Grape', 'pineapple', 'Orange']
+['Banana', 'Apple', 'Grape']
+['Banana', 'Apple', 'Grape', 'pineapple', 'Orange']
+['Banana', 'Apple', 'Grape', 'pineapple', 'Orange']
+['Banana', 'Grape', 'Orange']
+['Apple', 'pineapple']
+['Banana', 'pineapple', 'Orange']
+
+請謹慎使用程式碼。
+
+### 六、個人負責內容
+
+* 本作品由本人獨立設計測試案例並完成技術實作。
+* 透過實作深入理解 Python 串列切片語法的「含頭不含尾」原則，並熟練掌握動態調整陣列長度與資料特徵選取（Feature Selection）的核心觀念。
