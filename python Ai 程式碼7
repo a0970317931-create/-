@@ -50,7 +50,7 @@ print(b, type(b))
 print(c, type(c))
 print(d, type(d))
 
-請謹慎使用程式碼。
+
 
 ### 五、執行成果
 
