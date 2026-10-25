@@ -51,7 +51,6 @@ print(fruitsLisSorted)
 # 5. 再次確認原串列，證明其順序並未受到 sorted() 的破壞
 print(fruitsList)
 
-請謹慎使用程式碼。
 
 ### 五、執行成果
 
