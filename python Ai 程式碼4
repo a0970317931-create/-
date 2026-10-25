@@ -64,11 +64,6 @@ text
 ['Apple', 'Banana', 'Grape', 'Orange', 'pineapple']
 ['Orange', 'pineapple', 'Grape', 'Apple', 'Banana']
 
-請謹慎使用程式碼。
-
-**💡 面試加分小知識（ASCII 編碼排序特性）**：
-觀察排序後的結果可以發現，大寫字母開頭的 'Orange' 排在小寫字母開頭的 'pineapple' 前面。這是因為 sorted() 預設採用 ASCII 編碼排序，大寫字母（A-Z）的編碼數值小於小寫字母（a-z）。 
-
 ### 六、個人負責內容
 
 * 本作品由本人獨立設計驗證案例並完成技術實作。
