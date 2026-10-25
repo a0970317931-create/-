@@ -43,7 +43,7 @@ bmi = weight / (height / 100) ** 2
 # 3. 格式化輸出：使用 f-string 完美整合變數，並利用 :.2f 將 BMI 數值精確限制在小數點後兩位
 print(f'身高:{height}公分, 體重:{weight}公斤, BMI:{bmi:.2f}')
 
-請謹慎使用程式碼。
+
 
 ### 五、執行成果
 
