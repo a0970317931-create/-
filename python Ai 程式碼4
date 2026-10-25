@@ -1,1 +1,75 @@
+ fruitsList= ['Banana', 'Apple', 'Grape', 'pineapple', 'Orange']
+ fruitsList.reverse()
+ print(fruitsList)
+ print('-' * 80)
+ fruitsLisSorted = sorted(fruitsList)
+ print(fruitsLisSorted)
+ print(fruitsList)
+### Python 基礎資料結構：串列反轉與非破壞性排序操作
 
+### 一、作品介紹
+
+本作品運用 Python 展示對串列（List）資料進行順序重組的雙核心技術。 
+
+* **主要功能**：實現資料的「原地反轉（In-place Reverse）」與「非破壞性排序（Non-destructive Sorting）」，並進行狀態比對。
+* **專案目標**：透過程式範例深入剖析 Python 中「改變原始記憶體資料」與「產生全新排序副本」的行為差異，這在處理大數據、避免原始資料遭到意外篡改時，是極為關鍵的系統開發思維。
+
+### 二、使用技術
+
+技術類別使用內容
+****程式語言****
+Python 3.x
+****核心技術****
+List 串列資料結構、.reverse() 原地反轉、sorted() 全域排序函數、字串乘法（格式化分隔線）
+
+### 三、主要功能
+
+* **串列反轉操控**：使用 .reverse() 將原始串列中的元素順序直接倒轉，此動作會永久影響原始資料。
+* **非破壞性排序**：應用核心 sorted() 函數，依照 ASCII 編碼與字母順序對資料進行排序，並將結果輸出為一個「全新的串列」，同時完整保留原串列的佈局。
+* **狀態一致性觀察**：透過多層次的 print 檢視，清晰對比出資料在各階段操作後的記憶體狀態與內容變化。
+
+### 四、核心程式碼
+
+python
+
+# 初始化水果資料串列
+fruitsList = ['Banana', 'Apple', 'Grape', 'pineapple', 'Orange']
+
+# 1. 將原始串列進行原地反轉（直接改變原串列）
+fruitsList.reverse()
+print(fruitsList)
+
+# 2. 印出 80 個破折號作為輸出分隔線
+print('-' * 80)
+
+# 3. 使用 sorted() 進行排序（不改變原串列，回傳一個新串列）
+fruitsLisSorted = sorted(fruitsList)
+
+# 4. 印出排序後的全新串列結果
+print(fruitsLisSorted)
+
+# 5. 再次確認原串列，證明其順序並未受到 sorted() 的破壞
+print(fruitsList)
+
+請謹慎使用程式碼。
+
+### 五、執行成果
+
+此程式在終端機（Terminal）執行後的標準輸出結果如下，完整展現了反轉邏輯與排序副本的對比： 
+
+text
+
+['Orange', 'pineapple', 'Grape', 'Apple', 'Banana']
+--------------------------------------------------------------------------------
+['Apple', 'Banana', 'Grape', 'Orange', 'pineapple']
+['Orange', 'pineapple', 'Grape', 'Apple', 'Banana']
+
+請謹慎使用程式碼。
+
+**💡 面試加分小知識（ASCII 編碼排序特性）**：
+觀察排序後的結果可以發現，大寫字母開頭的 'Orange' 排在小寫字母開頭的 'pineapple' 前面。這是因為 sorted() 預設採用 ASCII 編碼排序，大寫字母（A-Z）的編碼數值小於小寫字母（a-z）。 
+
+### 六、個人負責內容
+
+* 本作品由本人獨立設計驗證案例並完成技術實作。
+* 透過實作深入熟練 Python 記憶體指標操作，並掌握變更方法（Mutable Methods）與純函數（Pure Functions）的架構差異。
